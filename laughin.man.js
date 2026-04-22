@@ -1,5 +1,6 @@
 const SQUARE_COUNT = 3;
-
+const TIMER_SPEED = 500;
+const speed = 5;
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector("#square").addEventListener("click", () => {
         alert("You clicked me!");
@@ -13,4 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
        square.className = "square";
        box.appendChild(square);
     }
+
+    Array.from(box.children).forEach((element) => {
+        let dx = 5 * (Math.random() * 2 - 1);
+        let dy = 5 * (Math.random() * 2 - 1);
+
+        let x = parseInt(element.style.left) || 0;
+        let y = parseInt(element.style.top) || 0;
+        setInterval(() => {
+            x += dx;
+            y += dy;
+            element.style.left = x + "px";
+            element.style.top = y + "px";
+        }, TIMER_SPEED)
+    });
+
 });
