@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
        let square = document.createElement("img");
        square.src = "laughing_man.jpg";
        square.alt = "Laughing Man";
-       square.class = "square";
+       square.className = "square";
        box.appendChild(square);
     }
 });
