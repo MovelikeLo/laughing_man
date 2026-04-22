@@ -1,0 +1,21 @@
+#box{
+    width: 500px;
+    height: 400px;
+    
+    position: relative;
+}
+
+#square{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 3px solid black;
+    top: 175px;
+    left: 175px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    
+}   
