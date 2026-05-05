@@ -15,14 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
        square.src = "laughing_man.jpg";
        square.alt = "Laughing Man";
        square.className = "square";
+       square.addEventListener("mouseover", () => {
+        square.src = "Orochimaru.jpg";
+    });
+    square.addEventListener("mouseout", () => {
+        square.src = "laughing_man.jpg";
+    });
        box.appendChild(square);
     }
+    
 
     Array.from(box.children).forEach((element) => {
         const parent = element.parentElement;
         const maxX = parent.clientWidth - element.clientWidth;
         const maxY = parent.clientHeight - element.clientHeight;
-        border = "1px solid red";
 
         let dx = SPEED * (Math.random()*2-1);
         let dy = SPEED * (Math.random()*2-1);
